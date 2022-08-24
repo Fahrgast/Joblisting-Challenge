@@ -2,6 +2,7 @@ import "./listings-container.styles.css";
 import React, { useEffect, useState } from "react";
 import { Listing } from "./listing/listing.component";
 import { FilterListings } from "../filter/filter.component";
+import { SearchBar } from "../searchbar/searchbar.component";
 
 /*
   This component compares the current listings with the applied
@@ -16,7 +17,7 @@ export function ListingContainer(props) {
   if (initialListings !== props.listings) {
     setInitialListings(props.listings);
   }
-
+  /* Set the filters array to the new filters after a category button has been clicked */
   function ChangeFilter(category) {
     const index = filters.indexOf(category);
     if (index === -1) {
@@ -48,6 +49,7 @@ export function ListingContainer(props) {
 
   return (
     <div className="listings-list">
+      <SearchBar activeFiltersArray={filters} />
       {filteredListings.map((listing) => (
         <Listing
           key={listing.id}

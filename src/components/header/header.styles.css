@@ -1,0 +1,6 @@
+.header{
+    background-color: var(--background);
+    background-image: url("../../images/bg-header-mobile.svg");
+    height: 18vh;
+    width: 100%;
+}

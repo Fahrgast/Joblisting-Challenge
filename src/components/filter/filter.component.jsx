@@ -1,10 +1,10 @@
 export function FilterListings(listings, filter) {
   /* 
-        Compare job listing categories with filter categories
+    Compare job listing categories with filter categories
 
-        -> if all filters are present in the listings categories,
-            add the listing to the new (filtered) list of job listings
-     */
+    -> if all filters are present in the listings categories,
+        add the listing to the new (filtered) list of job listings
+*/
   let checkFilter = (listingCategories, currentFilters) =>
     currentFilters.every((category) => listingCategories.includes(category));
 
