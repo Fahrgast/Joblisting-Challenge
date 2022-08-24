@@ -1,22 +1,28 @@
 import "./listings-container.styles.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Listing } from "./listing/listing.component";
-import { useState } from "react";
 
 export function ListingContainer(props) {
-  const [filters, setFilters] = useState(["Frontend"]);
+  const [filters, setFilters] = useState(["Frontend", "CSS"]);
+  const [filteredListings, setFilteredListings] = useState([]);
 
-  const filteredListings = props.listings.filter((listing) => {
-    let listingCategories = [
-      listing.role,
-      listing.level,
-      ...listing.languages,
-      ...listing.tools,
-    ];
-    let checkFilter = (listingCategories, currentFilters) =>
-      filters.every((category) => listingCategories.includes(category));
-    return checkFilter(listingCategories, filters);
-  });
+  useEffect(() => {
+    const filterListings = props.listings.filter((listing) => {
+      let listingCategories = [
+        listing.role,
+        listing.level,
+        ...listing.languages,
+        ...listing.tools,
+      ];
+      let checkFilter = (listingCategories, currentFilters) =>
+        currentFilters.every((category) =>
+          listingCategories.includes(category)
+        );
+      return checkFilter(listingCategories, filters);
+    });
+
+    setFilteredListings(filterListings);
+  }, [filters]);
 
   return (
     <div className="listings-list">

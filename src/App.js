@@ -4,6 +4,7 @@ import { ListingContainer } from "./components/listings/listings-container.compo
 
 function App() {
   const [listingData, setlistingData] = useState([]);
+  const [filters, setFilters] = useState(["Frontend"]);
 
   useEffect(() => {
     var input = require("./data.json");
