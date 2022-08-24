@@ -7,7 +7,6 @@ export function Listing(props) {
     id,
     company,
     logo,
-    newPosition,
     featured,
     position,
     role,
@@ -21,18 +20,26 @@ export function Listing(props) {
 
   /* Chrome had issues opening local files so the files were put on a server */
   const localServerAddress = "http://127.0.0.1:8080";
+  const isNew = props.listingData.new;
 
-  console.log(logo);
   return (
     <div className="listing">
-      <img src={`${localServerAddress}/src/${logo}`} alt="Company Logo" />
+      <img
+        className="company-logo"
+        src={`${localServerAddress}/src/${logo}`}
+        alt="Company Logo"
+      />
       <div className="job-info">
         <div className="listing-header">
           <h3>{company}</h3>
-          <h3>{newPosition}</h3>
-          <h3>{featured}</h3>
+          {isNew ? <h3 className="new-listing">NEW!</h3> : <h3> </h3>}
+          {featured ? (
+            <h3 className="featured-listing">FEATURED</h3>
+          ) : (
+            <h3></h3>
+          )}
         </div>
-        <h2>{position}</h2>
+        <h2 className="position-title">{position}</h2>
         <div className="listing-footer">
           <p>{postedAt}</p>
           <p>{contract}</p>
@@ -40,11 +47,13 @@ export function Listing(props) {
         </div>
       </div>
       <div className="categories">
-        <h3>{role}</h3>
-        <h3>{level}</h3>
+        <button>{role}</button>
+        <button>{level}</button>
         {languages.map((language) => (
-          //TODO add unique KEY
-          <h3 key="l">{language}</h3>
+          <button key={`${id}_${language}`}>{language}</button>
+        ))}
+        {tools.map((tool) => (
+          <button key={`${id}_${tool}`}>{tool}</button>
         ))}
       </div>
     </div>

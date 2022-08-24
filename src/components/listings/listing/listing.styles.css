@@ -1,0 +1,32 @@
+.listing{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid green;
+    padding: 2rem;
+}
+
+.company-logo{
+    width: 75px;
+}
+
+.listing-header{
+    display: flex;
+    flex-direction: row;
+}
+
+.listing-footer{
+    display: flex;
+    flex-direction: row;
+}
+
+.categories{
+    display: flex;
+    flex-direction: row;
+}
+
+.new-listing{
+    background-color: aqua;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 0 0.5rem;
+}
