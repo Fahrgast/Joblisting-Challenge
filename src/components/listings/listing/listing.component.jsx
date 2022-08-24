@@ -33,11 +33,7 @@ export function Listing(props) {
         <div className="listing-header">
           <h3>{company}</h3>
           {isNew ? <h3 className="new-listing">NEW!</h3> : <h3> </h3>}
-          {featured ? (
-            <h3 className="featured-listing">FEATURED</h3>
-          ) : (
-            <h3></h3>
-          )}
+          {featured ? <h3 className="featured-listing">FEATURED</h3> : <p></p>}
         </div>
         <h2 className="position-title">{position}</h2>
         <div className="listing-footer">
@@ -47,13 +43,23 @@ export function Listing(props) {
         </div>
       </div>
       <div className="categories">
-        <button>{role}</button>
-        <button>{level}</button>
+        <button onClick={() => props.changeFilter(role)}>{role}</button>
+        <button onClick={() => props.changeFilter(level)}>{level}</button>
         {languages.map((language) => (
-          <button key={`${id}_${language}`}>{language}</button>
+          <button
+            onClick={() => props.changeFilter(language)}
+            key={`${id}_${language}`}
+          >
+            {language}
+          </button>
         ))}
         {tools.map((tool) => (
-          <button key={`${id}_${tool}`}>{tool}</button>
+          <button
+            onClick={() => props.changeFilter(tool)}
+            key={`${id}_${tool}`}
+          >
+            {tool}
+          </button>
         ))}
       </div>
     </div>
