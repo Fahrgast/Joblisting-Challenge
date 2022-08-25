@@ -11,7 +11,6 @@ function App() {
     setlistingData(input);
   }, []);
 
-  //TODO Searchbar buttons And Styling
   return (
     <div className="App">
       <Header />

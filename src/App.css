@@ -12,6 +12,7 @@
   max-width: 100%;
 
   color: hsl(180, 29%, 50%);
+  font-family: 'League Spartan', sans-serif;
 }
 
 .App button{
@@ -20,5 +21,6 @@
   background-color: hsla(180, 29%, 50%, 0.15);
   border-radius: 5px;
 }
+
 
 

@@ -15,6 +15,7 @@ export function ListingContainer(props) {
   const [initialListings, setInitialListings] = useState([]);
   const searchbar = document.querySelector(".searchbar-container");
   const searchbarClear = document.querySelector(".searchbar-clear");
+  const firstListing = document.querySelector(".listing:nth-of-type(2)");
 
   if (initialListings !== props.listings) {
     setInitialListings(props.listings);
@@ -52,19 +53,22 @@ export function ListingContainer(props) {
   useEffect(() => {
     let filtered = FilterListings(props.listings, filters);
     setFilteredListings(filtered);
-    //TODO FIX WITH "FIT CONTENT" HEIGHT
-    if (searchbar) console.log("HEGIIT", searchbar.style.height);
-
     /* Show/Hide the searchbar depending on if there are filters chosen or not*/
-    if (searchbar && filters.length === 0 && searchbar.style.height > 0) {
-      searchbar.style.height = 0;
+    if (
+      searchbar &&
+      filters.length === 0 &&
+      searchbar.style.height === "fit-content"
+    ) {
       searchbarClear.style.display = "none";
+      searchbar.style.height = 0;
+      firstListing.style.marginTop = "6rem";
     } else if (
       filters.length > 0 &&
-      (searchbar.style.height === "0px" || searchbar.style.height > 0)
+      (searchbar.style.height === "0px" || searchbar.style.height == 0)
     ) {
-      searchbar.style.height = "fit-content";
       searchbarClear.style.display = "block";
+      searchbar.style.height = "fit-content";
+      firstListing.style.marginTop = "4rem";
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);

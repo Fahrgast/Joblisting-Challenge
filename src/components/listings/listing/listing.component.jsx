@@ -24,26 +24,32 @@ export function Listing(props) {
 
   return (
     <div className="listing">
-      <img
-        className="company-logo"
-        src={`${localServerAddress}/src/${logo}`}
-        alt="Company Logo"
-      />
-      <div className="job-info">
-        <div className="listing-header">
-          <h3 className="company-name">{company}</h3>
-          {isNew ? <h3 className="new-listing">NEW!</h3> : <h3> </h3>}
-          {featured ? <h3 className="featured-listing">FEATURED</h3> : <p></p>}
-        </div>
-        <h3 className="position-title">{position}</h3>
-        <div className="listing-footer">
-          <p>
-            {postedAt} <span>&#8226;</span>
-          </p>
-          <p>
-            {contract} <span>&#8226;</span>
-          </p>
-          <p>{location}</p>
+      <div className="left-side">
+        <img
+          className="company-logo"
+          src={`${localServerAddress}/src/${logo}`}
+          alt="Company Logo"
+        />
+        <div className="job-info">
+          <div className="listing-header">
+            <h3 className="company-name">{company}</h3>
+            {isNew ? <h3 className="new-listing">NEW!</h3> : <h3> </h3>}
+            {featured ? (
+              <h3 className="featured-listing">FEATURED</h3>
+            ) : (
+              <p></p>
+            )}
+          </div>
+          <h3 className="position-title">{position}</h3>
+          <div className="listing-footer">
+            <p>
+              {postedAt} <span>&#8226;</span>
+            </p>
+            <p>
+              {contract} <span>&#8226;</span>
+            </p>
+            <p>{location}</p>
+          </div>
         </div>
       </div>
       <div className="categories">

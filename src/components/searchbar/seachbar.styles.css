@@ -7,11 +7,6 @@
     background-color: white;
     margin-top: -2rem;
     padding: 0 2rem;
-    margin-bottom: 2.5rem;
-
-    -webkit-transition: all .35s ease;
-    -moz-transition: all .35s ease;
-    transition: all .35s ease;
 }
 
 .searchbar-categories{
@@ -21,7 +16,8 @@
 }
 
 .searchbar-element{
-    margin: 0 0.75rem;
+    margin: 0.5rem 0.75rem;
+    margin-left: 0;
 }
 
 .remove-filter-text{
@@ -59,6 +55,8 @@
     background: none !important;
     border: none;
     cursor: pointer;
+    font-weight: 700;
+    color: hsl(180, 8%, 52%) !important;
 }
 
 .searchbar-clear:hover{
