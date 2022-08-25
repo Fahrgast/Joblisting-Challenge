@@ -2,8 +2,23 @@
 :root{
   --primary: hsl(180, 29%, 50%),
   --background: hsl(180, 52%, 96%),
-  --filter-Tablets: hsl(180, 31%, 95%),
+  --filter-tablets: hsl(180, 31%, 95%),
   --dark-grayish-cyan: hsl(180, 8%, 52%),
-  --very-dark-grayish-cyan:hsl(180, 14%, 20%),
+  --very-dark-grayish-cyan: hsl(180, 14%, 20%),
 }
+
+.App{
+  background-color: hsl(180, 52%, 96%);
+  max-width: 100%;
+
+  color: hsl(180, 29%, 50%);
+}
+
+.App button{
+  color: hsl(180, 29%, 50%);
+  border: none;
+  background-color: hsla(180, 29%, 50%, 0.15);
+  border-radius: 5px;
+}
+
 

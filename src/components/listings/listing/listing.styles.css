@@ -1,32 +1,93 @@
 .listing{
     display: flex;
     flex-direction: column;
-    border: 2px solid green;
     padding: 2rem;
+    background-color: white;
+    border-radius: 5px;
+    border-left: 5px solid hsl(180, 29%, 50%);
+    margin: 2rem 0;
+    font-size: 0.85rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .company-logo{
-    width: 75px;
+    width: 50px;
+    height: auto;
+    margin-top: -3.5rem;
 }
 
 .listing-header{
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.company-name{
+    margin-right: 1.5rem;
+}
+
+.new-listing{
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 0.2rem 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.featured-listing{
+    background-color:  hsl(180, 14%, 20%);
+    color: white;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 0.2rem 0.5rem;
+}
+
+
+
+.position-title{
+    margin: 0;
+    color: black;
 }
 
 .listing-footer{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color: lightslategrey;
+    border-bottom: 1px solid lightslategrey;
+    padding-bottom: 0.5rem;
 }
+
+.listing-footer p{
+    padding-right: 0.75rem;
+}
+
+.listing-footer p span{
+    padding-left: 0.75rem;
+}
+
 
 .categories{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.new-listing{
-    background-color: aqua;
-    border-radius: 20px;
-    width: fit-content;
+.categories button{
+    height: 30px;
+    font-weight: bold;
     padding: 0 0.5rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
 }
+
+.categories button:hover{
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+}
+

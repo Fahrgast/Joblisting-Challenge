@@ -1,6 +1,14 @@
 .header{
-    background-color: var(--background);
+    background-color: hsl(180, 29%, 50%);
     background-image: url("../../images/bg-header-mobile.svg");
+    background-size: contain;
     height: 18vh;
-    width: 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 992px){
+    .header{
+        background-image: url("../../images/bg-header-desktop.svg");
+        background-size: cover;
+    }
 }

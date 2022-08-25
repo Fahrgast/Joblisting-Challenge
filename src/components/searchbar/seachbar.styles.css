@@ -1,5 +1,66 @@
 .searchbar-container{
-    height: 4rem;
-    width: 80%;
+    height: 0;
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    margin-top: -2rem;
+    padding: 0 2rem;
+    margin-bottom: 2.5rem;
+
+    -webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    transition: all .35s ease;
+}
+
+.searchbar-categories{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.searchbar-element{
+    margin: 0 0.75rem;
+}
+
+.remove-filter-text{
+    height: 30px;
+    font-weight: bold;
+    padding: 0 0.5rem;
+    border-radius: 0 !important;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.remove-filter-btn{
+   height: 30px;
+   width: 35px;
+   position: relative;
+   top: 1px;
+   border: none;
+   border-radius: 0 !important;
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+   background-color: hsl(180, 29%, 50%) !important;
+   cursor: pointer;
+}
+
+.remove-filter-btn:hover{
+    background-color: hsl(180, 14%, 20%) !important;
+ }
+
+.remove-btn-icon{
+    position: relative;
+    top: 2px;
+}
+
+.searchbar-clear{
+    background: none !important;
+    border: none;
+    cursor: pointer;
+}
+
+.searchbar-clear:hover{
+    text-decoration: underline;
 }

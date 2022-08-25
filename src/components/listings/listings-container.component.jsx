@@ -13,20 +13,28 @@ export function ListingContainer(props) {
   const [filteredListings, setFilteredListings] = useState([]);
   const [filters, setFilters] = useState([]);
   const [initialListings, setInitialListings] = useState([]);
+  const searchbar = document.querySelector(".searchbar-container");
+  const searchbarClear = document.querySelector(".searchbar-clear");
 
   if (initialListings !== props.listings) {
     setInitialListings(props.listings);
   }
-  /* Set the filters array to the new filters after a category button has been clicked */
+
+  /* Set the filters array to the new filters after a category button or "clear" has been clicked */
   function ChangeFilter(category) {
-    const index = filters.indexOf(category);
-    if (index === -1) {
-      filters.push(category);
-      let newFilters = [...filters];
-      setFilters(newFilters);
-    } else if (index > -1) {
-      filters.splice(index, 1);
-      let newFilters = [...filters];
+    if (category !== "clear") {
+      const index = filters.indexOf(category);
+      if (index === -1) {
+        filters.push(category);
+        let newFilters = [...filters];
+        setFilters(newFilters);
+      } else if (index > -1) {
+        filters.splice(index, 1);
+        let newFilters = [...filters];
+        setFilters(newFilters);
+      }
+    } else {
+      let newFilters = [];
       setFilters(newFilters);
     }
   }
@@ -44,12 +52,26 @@ export function ListingContainer(props) {
   useEffect(() => {
     let filtered = FilterListings(props.listings, filters);
     setFilteredListings(filtered);
+    //TODO FIX WITH "FIT CONTENT" HEIGHT
+    if (searchbar) console.log("HEGIIT", searchbar.style.height);
+
+    /* Show/Hide the searchbar depending on if there are filters chosen or not*/
+    if (searchbar && filters.length === 0 && searchbar.style.height > 0) {
+      searchbar.style.height = 0;
+      searchbarClear.style.display = "none";
+    } else if (
+      filters.length > 0 &&
+      (searchbar.style.height === "0px" || searchbar.style.height > 0)
+    ) {
+      searchbar.style.height = "fit-content";
+      searchbarClear.style.display = "block";
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);
 
   return (
     <div className="listings-list">
-      <SearchBar activeFiltersArray={filters} />
+      <SearchBar activeFiltersArray={filters} changeFilter={ChangeFilter} />
       {filteredListings.map((listing) => (
         <Listing
           key={listing.id}
