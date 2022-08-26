@@ -27,7 +27,7 @@ export function Listing(props) {
       <div className="left-side">
         <img
           className="company-logo"
-          src={`${localServerAddress}/src/${logo}`}
+          src={`../../../images/${logo}`}
           alt="Company Logo"
         />
         <div className="job-info">

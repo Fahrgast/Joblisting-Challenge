@@ -53,7 +53,7 @@ export function ListingContainer(props) {
   useEffect(() => {
     let filtered = FilterListings(props.listings, filters);
     setFilteredListings(filtered);
-    /* Show/Hide the searchbar depending on if there are filters chosen or not*/
+    /* Show/Hide the searchbar depending on if there are filters chosen or not */
     if (
       searchbar &&
       filters.length === 0 &&
