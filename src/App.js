@@ -13,7 +13,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>IM WORKING</h1>
       <Header />
       <ListingContainer listings={listingData} />
     </div>

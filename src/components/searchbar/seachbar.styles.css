@@ -57,6 +57,7 @@
     cursor: pointer;
     font-weight: 700;
     color: hsl(180, 8%, 52%) !important;
+    display: none;
 }
 
 .searchbar-clear:hover{

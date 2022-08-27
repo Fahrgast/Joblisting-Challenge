@@ -18,18 +18,12 @@ export function Listing(props) {
     tools,
   } = props.listingData;
 
-  /* Chrome had issues opening local files so the files were put on a server */
-  const localServerAddress = "http://127.0.0.1:8080";
   const isNew = props.listingData.new;
 
   return (
     <div className="listing">
       <div className="left-side">
-        <img
-          className="company-logo"
-          src={`../../../images/${logo}`}
-          alt="Company Logo"
-        />
+        <img className="company-logo" src={logo} alt="Company Logo" />
         <div className="job-info">
           <div className="listing-header">
             <h3 className="company-name">{company}</h3>

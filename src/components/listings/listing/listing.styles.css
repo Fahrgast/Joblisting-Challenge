@@ -61,8 +61,6 @@
     color: hsl(180, 29%, 50%);
 }
 
-
-
 .listing-footer{
     display: flex;
     flex-direction: row;
@@ -87,8 +85,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
-
+    justify-content: flex-end;
 }
 
 .categories button{
