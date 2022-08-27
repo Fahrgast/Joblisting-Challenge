@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Fahrgast/Joblisting-Challenge/static/css/main.ef50b5dd.css",
-    "main.js": "/Fahrgast/Joblisting-Challenge/static/js/main.831b28f0.js",
-    "static/js/787.37ad18a2.chunk.js": "/Fahrgast/Joblisting-Challenge/static/js/787.37ad18a2.chunk.js",
-    "static/media/bg-header-desktop.svg": "/Fahrgast/Joblisting-Challenge/static/media/bg-header-desktop.752d0faf14c00c6fb55f.svg",
-    "index.html": "/Fahrgast/Joblisting-Challenge/index.html",
-    "static/media/bg-header-mobile.svg": "/Fahrgast/Joblisting-Challenge/static/media/bg-header-mobile.b7750a0c3e0c016763b9.svg",
-    "main.ef50b5dd.css.map": "/Fahrgast/Joblisting-Challenge/static/css/main.ef50b5dd.css.map",
-    "main.831b28f0.js.map": "/Fahrgast/Joblisting-Challenge/static/js/main.831b28f0.js.map",
-    "787.37ad18a2.chunk.js.map": "/Fahrgast/Joblisting-Challenge/static/js/787.37ad18a2.chunk.js.map"
+    "main.css": "/Joblisting-Challenge/static/css/main.a83ce60a.css",
+    "main.js": "/Joblisting-Challenge/static/js/main.325b1659.js",
+    "static/js/787.37ad18a2.chunk.js": "/Joblisting-Challenge/static/js/787.37ad18a2.chunk.js",
+    "static/media/bg-header-desktop.svg": "/Joblisting-Challenge/static/media/bg-header-desktop.752d0faf14c00c6fb55f.svg",
+    "index.html": "/Joblisting-Challenge/index.html",
+    "static/media/bg-header-mobile.svg": "/Joblisting-Challenge/static/media/bg-header-mobile.b7750a0c3e0c016763b9.svg",
+    "main.a83ce60a.css.map": "/Joblisting-Challenge/static/css/main.a83ce60a.css.map",
+    "main.325b1659.js.map": "/Joblisting-Challenge/static/js/main.325b1659.js.map",
+    "787.37ad18a2.chunk.js.map": "/Joblisting-Challenge/static/js/787.37ad18a2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef50b5dd.css",
-    "static/js/main.831b28f0.js"
+    "static/css/main.a83ce60a.css",
+    "static/js/main.325b1659.js"
   ]
 }
