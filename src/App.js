@@ -1,20 +1,13 @@
 import "./App.css";
-import { useState, useEffect } from "react";
 import { Header } from "./components/header/header.component";
 import { ListingContainer } from "./components/listings/listings-container.component";
+import jobs from "./data.json";
 
 function App() {
-  const [listingData, setlistingData] = useState([]);
-
-  useEffect(() => {
-    var input = require("./data.json");
-    setlistingData(input);
-  }, []);
-
   return (
     <div className="App">
       <Header />
-      <ListingContainer listings={listingData} />
+      <ListingContainer listings={jobs} />
     </div>
   );
 }

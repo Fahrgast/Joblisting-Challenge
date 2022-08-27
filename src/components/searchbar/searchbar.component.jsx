@@ -14,7 +14,7 @@ export function SearchBar(props) {
               >
                 <img
                   className="remove-btn-icon"
-                  src="http://127.0.0.1:8080/src/images/icon-remove.svg"
+                  src="./images/icon-remove.svg"
                   alt="Remove Filter"
                 />
               </button>
